@@ -1,9 +1,9 @@
 let input = document.getElementById("Input");
 let add = document.getElementById("add");
 let todoBox = document.getElementById("todoBox");
-let todoItem = document.getElementById("todoItem");
+let todoItem = document.querySelector(".todoItem");
 
-//* Local storage set data
+//* Set data in localStorage
 function localSetData() {
   arr.push(input.value);
   arr = [...new Set(arr)];
@@ -11,7 +11,7 @@ function localSetData() {
   localStorage.setItem("inputData", jsonString);
 }
 
-//* Local storage Get data
+//* Get data from localStorage
 function localGetData() {
   return JSON.parse(localStorage.getItem("inputData"));
 }
@@ -22,7 +22,7 @@ function showTodoList() {
     let todoItem = document.createElement("div");
     todoItem.classList = "todoItem r-flex";
     todoItem.innerHTML = `<li>${curElem}</li>
-      <button id="delete">Delete</button>`;
+      <button class="delete">Delete</button>`;
     todoBox.append(todoItem);
   });
 }
@@ -35,12 +35,30 @@ add.addEventListener("click", (event) => {
   event.preventDefault();
   let inputValue = input.value.trim();
   if (!arr.includes(inputValue) && inputValue != "") {
-    localSetData(); //* Local storage set data
+    localSetData(); //* Set data in localStorage
     let todoItem = document.createElement("div");
     todoItem.classList = "todoItem r-flex";
     todoItem.innerHTML = `<li>${input.value}</li>
-      <button id="delete">Delete</button>`;
+      <button class="delete">Delete</button>`;
     todoBox.append(todoItem);
   }
   input.value = "";
+});
+
+//* Deleting and setItem after deleting
+function removeSetData(arr) {
+  let jsonString = JSON.stringify(arr);
+  localStorage.setItem("inputData", jsonString);
+}
+todoBox.addEventListener("click", function (e) {
+  let rmText = e.target;
+  if (rmText.classList.contains("delete")) {
+    let removeText = rmText.previousElementSibling.textContent;
+    arr = arr.filter((curElem) => {
+      return curElem != removeText;
+    });
+    removeSetData(arr);
+    let parentElem = rmText.parentElement;
+    parentElem.remove();
+  }
 });

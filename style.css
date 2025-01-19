@@ -58,7 +58,6 @@ button:hover {
 #todoBox{
     margin-top: 1vh;
     gap: 2vh;
-
 }
 .todoItem{
     width: 26.9vw;
@@ -68,4 +67,55 @@ button:hover {
         list-style-type: circle;
         line-height: 30px;
     }
+}
+
+/*! Responsive 920px */
+@media (max-width : 920px) {
+  h1 {
+    font-size: 3.5vw;
+  }
+  #Input {
+    width: 30vw;
+    height: 5.5vh;
+    font-size: 1.8vw;
+  }
+  button {
+    padding-block: 1.8vh;
+    padding-inline: 2.2vw;
+    font-size: 1.6vw;
+  }
+  .todoItem{
+    width: 36vw;
+    & li{
+        font-size: 2vw;
+    }
+}
+}
+
+/*! Responsive 600px */
+@media (max-width : 600px) {
+  h1 {
+    font-size: 4.2vh;
+  }
+  .inputfield {
+    gap: 2vh;
+  }
+  #Input {
+    width: 24vh;
+    height: 10vw;
+    font-size: 1.8vh;
+    border-radius: 8px;
+
+  }
+  button {
+    padding-block: 2.4vw;
+    padding-inline: 2.2vh;
+    font-size: 1.9vh;
+  }
+  .todoItem{
+    width: 35vh;
+    & li{
+        font-size: 2vh;
+    }
+}
 }

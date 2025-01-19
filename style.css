@@ -55,22 +55,22 @@ button:hover {
   border: 1px solid rgb(255, 212, 156);
   background-color: rgb(23, 23, 23);
 }
-#todoBox{
-    margin-top: 1vh;
-    gap: 2vh;
+#todoBox {
+  margin-top: 1vh;
+  gap: 2vh;
 }
-.todoItem{
-    width: 26.9vw;
-    justify-content: space-between;
-    & li{
-        font-size: 1.1vw;
-        list-style-type: circle;
-        line-height: 30px;
-    }
+.todoItem {
+  width: 26.9vw;
+  justify-content: space-between;
+  & li {
+    font-size: 1.1vw;
+    list-style-type: circle;
+    line-height: 30px;
+  }
 }
 
 /*! Responsive 920px */
-@media (max-width : 920px) {
+@media (max-width: 920px) {
   h1 {
     font-size: 3.5vw;
   }
@@ -84,16 +84,16 @@ button:hover {
     padding-inline: 2.2vw;
     font-size: 1.6vw;
   }
-  .todoItem{
+  .todoItem {
     width: 36vw;
-    & li{
-        font-size: 2vw;
+    & li {
+      font-size: 2vw;
     }
-}
+  }
 }
 
 /*! Responsive 600px */
-@media (max-width : 600px) {
+@media (max-width: 600px) {
   h1 {
     font-size: 4.2vh;
   }
@@ -105,17 +105,16 @@ button:hover {
     height: 10vw;
     font-size: 1.8vh;
     border-radius: 8px;
-
   }
   button {
     padding-block: 2.4vw;
     padding-inline: 2.2vh;
     font-size: 1.9vh;
   }
-  .todoItem{
+  .todoItem {
     width: 35vh;
-    & li{
-        font-size: 2vh;
+    & li {
+      font-size: 2vh;
     }
-}
+  }
 }

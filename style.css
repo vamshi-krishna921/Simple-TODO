@@ -1,0 +1,70 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(23, 23, 23);
+  gap: 2vh;
+  color: white;
+  font-family: "Roboto", serif;
+}
+.c-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.r-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inputfield {
+  gap: 2vw;
+}
+h1 {
+  font-size: 3vw;
+  font-weight: 500;
+  color: rgb(255, 212, 156);
+}
+#Input {
+  width: 20vw;
+  height: 5.5vh;
+  font-size: 1.1vw;
+  font-weight: 400;
+  border: none;
+  outline-color: rgb(255, 212, 156);
+  border-radius: 10px;
+}
+button {
+  padding-block: 1.3vh;
+  padding-inline: 1.5vw;
+  font-size: 1.2vw;
+  font-family: "Roboto", serif;
+  border-radius: 10px;
+  background-color: rgb(255, 212, 156);
+  outline: none;
+  border: none;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+button:hover {
+  color: rgb(255, 212, 156);
+  border: 1px solid rgb(255, 212, 156);
+  background-color: rgb(23, 23, 23);
+}
+#todoBox{
+    margin-top: 1vh;
+    gap: 2vh;
+
+}
+.todoItem{
+    width: 26.9vw;
+    justify-content: space-between;
+    & li{
+        font-size: 1.1vw;
+        list-style-type: circle;
+    }
+}
